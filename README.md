@@ -2,7 +2,8 @@
 
 This repository contains all the necessary **YAML files** and commands to install and run **DeepSeek AI** on **Kubernetes** using **Ollama**.  
 
-📺 **Watch the Full Tutorial on YouTube:**  
+📺 **Watch the Full Tutorial on YouTube:** 
+
 [![DeepSeek on Kubernetes](https://img.youtube.com/vi/2N12lL-9mS0/0.jpg)](https://youtu.be/2N12lL-9mS0?si=Xda8jNn7Yehpq7NV)  
 
 ---
