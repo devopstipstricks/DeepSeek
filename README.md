@@ -21,9 +21,9 @@ In this setup, we:
 
 | File | Description |
 |------|------------|
-| `deepseek-pvcs.yaml` | Creates Persistent Volume Claims for DeepSeek & Web UI |
+| `deepseek-pvc.yaml` | Creates Persistent Volume Claims for DeepSeek & Web UI |
 | `deepseek-server-deployment.yaml` | Deploys DeepSeek AI Server on Kubernetes |
 | `deepseek-server-svc.yaml` | Exposes DeepSeek via a Kubernetes Service |
 | `deepseek-ui-deployment.yaml` | Deploys the DeepSeek Web UI |
-| `deepseek-server-svc.yaml` | Exposes DeepSeek UI via a Kubernetes Service |
-| `deepseek-ingress.yaml` | Configures Ingress for external access |
+| `deepseek-ui-svc.yaml` | Exposes DeepSeek UI via a Kubernetes Service |
+| `deepseek-ing.yaml` | Configures Ingress for external access |
