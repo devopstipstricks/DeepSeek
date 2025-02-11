@@ -1,72 +1,29 @@
-DeepSeek on Kubernetes
+# 🚀 Deploying DeepSeek on Kubernetes  
 
-This repository provides all the necessary YAML files and commands to deploy DeepSeek AI on Kubernetes using Ollama. Follow along with the YouTube tutorial for a step-by-step guide.
+This repository contains all the necessary **YAML files** and commands to install and run **DeepSeek AI** on **Kubernetes** using **Ollama**.  
 
-📌 YouTube Tutorial
+📺 **Watch the Full Tutorial on YouTube:**  
+[![DeepSeek on Kubernetes](https://img.youtube.com/vi/2N12lL-9mS0/0.jpg)](https://youtu.be/2N12lL-9mS0?si=Xda8jNn7Yehpq7NV)  
 
-🎥 Watch the full tutorial here: Installing & Running DeepSeek on Kubernetes
+---
 
-🚀 What’s Included
+## 📌 Overview  
 
-Namespace Creation (deepseek)
+In this setup, we:  
+✅ Deploy **DeepSeek AI** with Kubernetes & Ollama  
+✅ Use **Persistent Volume Claims (PVCs)** for model storage  
+✅ Expose DeepSeek via **Ingress** (`deepseek.devopstips.local`)  
+✅ Run the Web UI using `ghcr.io/ollama-webui/ollama-webui:latest`  
 
-Persistent Volume Claims (PVCs) for models and web UI
+---
 
-DeepSeek Deployment using Ollama
+## 📂 Files & Setup  
 
-Web UI Deployment (ghcr.io/ollama-webui/ollama-webui:latest)
-
-Service & Ingress Configuration
-
-📂 Files in This Repo
-
-deepseek-pvc.yaml – Defines Persistent Volume Claims
-
-deepseek-server-deployment.yaml – Deploys DeepSeek with Ollama
-
-deepseek-server-svc.yaml – Exposes DeepSeek server within the cluster
-
-deepseek-ui-deployment.yaml – Deploys the Web UI
-
-deepseek-ui-svc.yaml – Exposes DeepSeek ui within the cluster
-
-deepseek-ing.yaml – Configures Ingress for external access
-
-🛠 Setup Instructions
-
-Clone the repository:
-
-git clone https://github.com/devopstipstricks/DeepSeek.git
-cd DeepSeek
-
-Create the namespace:
-
-kubectl create namespace deepseek
-
-Apply the configurations:
-
-kubectl apply -f deepseek-pvcs.yaml
-kubectl apply -f deepseek-deployment.yaml
-kubectl apply -f deepseek-service.yaml
-kubectl apply -f deepseek-ui-deployment.yaml
-kubectl apply -f deepseek-ingress.yaml
-
-Check the running pods:
-
-kubectl get pods -n deepseek
-
-Access the Web UI:
-Open your browser and go to:
-
-http://deepseek.devopstips.local
-
-🤝 Contributing
-
-Feel free to submit issues or pull requests to improve this setup!
-
-📢 Stay Connected
-
-🔔 Subscribe for more DevOps & Kubernetes content: DevOpsTips YouTube Channel
-
-Happy deploying! 🚀
-
+| File | Description |
+|------|------------|
+| `deepseek-pvcs.yaml` | Creates Persistent Volume Claims for DeepSeek & Web UI |
+| `deepseek-server-deployment.yaml` | Deploys DeepSeek AI Server on Kubernetes |
+| `deepseek-server-svc.yaml` | Exposes DeepSeek via a Kubernetes Service |
+| `deepseek-ui-deployment.yaml` | Deploys the DeepSeek Web UI |
+| `deepseek-server-svc.yaml` | Exposes DeepSeek UI via a Kubernetes Service |
+| `deepseek-ingress.yaml` | Configures Ingress for external access |
