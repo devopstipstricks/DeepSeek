@@ -1,4 +1,3 @@
-# DeepSeek
 # 🚀 Deploying DeepSeek on Kubernetes  
 
 This repository contains all the necessary **YAML files** and commands to install and run **DeepSeek AI** on **Kubernetes** using **Ollama**.  
@@ -36,3 +35,46 @@ In this setup, we:
 ```bash
 git clone https://github.com/devopstipstricks/DeepSeek.git
 cd DeepSeek
+2️⃣ Create the Namespace
+bash
+Copy
+Edit
+kubectl create namespace deepseek
+3️⃣ Apply the PVCs
+bash
+Copy
+Edit
+kubectl apply -f deepseek-pvcs.yaml
+4️⃣ Deploy DeepSeek AI
+bash
+Copy
+Edit
+kubectl apply -f deepseek-deployment.yaml
+5️⃣ Expose DeepSeek with a Service
+bash
+Copy
+Edit
+kubectl apply -f deepseek-service.yaml
+6️⃣ Deploy the Web UI
+bash
+Copy
+Edit
+kubectl apply -f deepseek-ui-deployment.yaml
+7️⃣ Set Up Ingress for Access
+bash
+Copy
+Edit
+kubectl apply -f deepseek-ingress.yaml
+8️⃣ Verify the Deployment
+bash
+Copy
+Edit
+kubectl get pods -n deepseek
+kubectl get svc -n deepseek
+🎯 How to Access
+DeepSeek API: http://deepseek.devopstips.local
+DeepSeek Web UI: http://deepseek.devopstips.local/ui
+💡 Make sure your DNS or /etc/hosts file is configured to resolve deepseek.devopstips.local.
+
+🤝 Contributing
+Feel free to fork this repository, open issues, or submit pull requests! 🚀
