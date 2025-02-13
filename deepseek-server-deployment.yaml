@@ -27,10 +27,10 @@ spec:
         - containerPort: 11434
         volumeMounts:
         - name: model-storage
-          mountPath: /app/data
+          mountPath: /root/.ollama
         env:
         - name: OLLAMA_MOD_DIR
-          value: "/app/data"
+          value: "/root/.ollama"
       volumes:
       - name: model-storage
         persistentVolumeClaim:
